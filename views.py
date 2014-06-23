@@ -1,6 +1,6 @@
 from django.http import HttpResponseRedirect
 from django.db.models import Q
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, reverse
 from django.template import RequestContext
 from django.core.mail import send_mail
 from models import Recipe, Food
