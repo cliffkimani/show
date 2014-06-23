@@ -50,3 +50,14 @@ class RecipeView(DetailView):
         else:
             recipe.scale = 1.0
         return recipe
+    
+class CartDiscountCodeDeleteView(View):
+    success_url = reverse_lazy('checkout_selection')
+
+    def get_success_url(self):
+        return self.success_url
+
+    def post(self, *args, **kwargs):
+        cart = get_or_create_cart(self.request)
+        cart.cartdiscountcode_set.all().delete()
+        return redirect(self.get_success_url())
