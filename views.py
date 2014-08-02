@@ -5,6 +5,7 @@ from django.template import RequestContext
 from django.core.mail import send_mail
 from models import Recipe, Food
 
+
 from django.views.generic import ListView, CreateView, DetailView
 
 
