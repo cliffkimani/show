@@ -13,7 +13,7 @@ from django.views.generic import ListView, CreateView, DetailView
 
 def root(request):
     return HttpResponseRedirect("/cookbook")
-
+#fg
 class RecipeListView(ListView):
     model = Recipe
     paginate_by = 25
